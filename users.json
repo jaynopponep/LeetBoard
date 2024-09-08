@@ -1,5 +1,13 @@
 {
     "1150800954606768150": {
+        "links": [
+            "https://leetcode.com/problems/longest-repeating-character-replacement/submissions/1382665434",
+            "https://leetcode.com/problems/longest-repeating-character-replacement/description/"
+        ],
+        "problems": [
+            "longest-repeating-character-replacement",
+            "longest-repeating-character-replacement/description/"
+        ],
         "submissions": 2
     }
 }
