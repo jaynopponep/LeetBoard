@@ -1,13 +1,33 @@
 {
     "1150800954606768150": {
         "links": [
+            "https://leetcode.com/problems/valid-sudoku/submissions/1381595909",
             "https://leetcode.com/problems/longest-repeating-character-replacement/submissions/1382665434",
-            "https://leetcode.com/problems/longest-repeating-character-replacement/description/"
+            "https://leetcode.com/problems/top-k-frequent-elements/submissions/1379186010/"
         ],
         "problems": [
+            "valid-sudoku",
             "longest-repeating-character-replacement",
-            "longest-repeating-character-replacement/description/"
+            "top-k-frequent-elements"
         ],
-        "submissions": 2
+        "submissions": 3
+    },
+    "152207704545296384": {
+        "links": [
+            "https://leetcode.com/problems/freaky-leetcode/submissions/69/"
+        ],
+        "problems": [
+            "freaky-leetcode"
+        ],
+        "submissions": 1
+    },
+    "508652734510006273": {
+        "links": [
+            "https://leetcode.com/problems/freaky-leetcode/submissions/69/"
+        ],
+        "problems": [
+            "freaky-leetcode"
+        ],
+        "submissions": 1
     }
 }

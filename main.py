@@ -58,7 +58,7 @@ async def submit(ctx, link):
 		with open('users.json', 'w', encoding='utf8') as f:
 			json.dump(users,f,sort_keys=True,indent=4,ensure_ascii=False)
 		subs = users[str(ctx.author.id)]['submissions']
-		await ctx.channel.send(f"{ctx.author.name} now has {subs} submissions")
+		await ctx.channel.send(f"{ctx.author.name} has solved {subs} leetcode problems!")
 	except Exception as e:
 		await ctx.send(f"An error occurred: {e}")
 
