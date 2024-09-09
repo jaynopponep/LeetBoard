@@ -2,6 +2,8 @@ import discord
 from discord.ext import commands
 import json
 import os
+import asyncio
+from playwright.async_api import async_playwright
 
 bot = commands.Bot(command_prefix="lc ", intents=discord.Intents.all())
 
@@ -18,9 +20,24 @@ def extract_problem(link):
 	except IndexError:
 		return None
 
+async def validate_page(link):
+	async with async_playwright() as p:
+		browser = await p.chromium.launch(headless=True)
+		page = await browser.new_page()
+		await page.goto(link)
+		page_content = await page.content()
+		if "Accepted" not in page_content:
+			return False
+		await browser.close()
+		return True
+
 @bot.command()
 async def submit(ctx, link):
 	try:
+		is_valid = await validate_page(link)
+		if not is_valid:
+			await ctx.send("Not a valid submission link or problem")
+			return
 		if os.path.exists('users.json'):
 			with open('users.json', 'r', encoding='utf8') as f:
 				users = json.load(f)
