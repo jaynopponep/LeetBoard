@@ -4,7 +4,9 @@ import json
 import os
 from playwright.async_api import async_playwright
 
-bot = commands.Bot(command_prefix="lc ", intents=discord.Intents.all())
+bot = commands.Bot(
+    command_prefix="lc ", intents=discord.Intents.all(), case_insensitive=True
+)
 
 with open("token.txt") as file:
     token = file.read()
