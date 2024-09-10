@@ -1,0 +1,14 @@
+[2024-09-10 20:31:10] [INFO    ] discord.client: logging in using static token
+[2024-09-10 20:31:10] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: f3b6e72c9b36ad001e8939b9736c43cf).
+/home/ec2-user/LeetBoard/main.py:93: RuntimeWarning: coroutine 'Context.send' was never awaited
+  ctx.send("Leaderboard: ")
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+[2024-09-10 20:34:45] [INFO    ] discord.client: logging in using static token
+[2024-09-10 20:34:46] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: f2e15ff337825de89366050aa80d5ddc).
+/home/ec2-user/LeetBoard/main.py:93: RuntimeWarning: coroutine 'Context.send' was never awaited
+  ctx.send("Leaderboard: ")
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+[2024-09-10 20:38:35] [INFO    ] discord.client: logging in using static token
+[2024-09-10 20:38:35] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 15542bb6dfa3553f361fbcd1ad1eb9c1).
+[2024-09-10 20:39:02] [ERROR   ] discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "leader" is not found
