@@ -4,14 +4,53 @@
             "https://leetcode.com/problems/valid-sudoku/submissions/1381595909",
             "https://leetcode.com/problems/longest-repeating-character-replacement/submissions/1382665434",
             "https://leetcode.com/problems/top-k-frequent-elements/submissions/1379186010/",
-            "https://leetcode.com/problems/product-of-array-except-self/submissions/1379142478/"
+            "https://leetcode.com/problems/product-of-array-except-self/submissions/1379142478/",
+            "https://leetcode.com/problems/merge-two-sorted-lists/submissions/1385788708/"
         ],
         "problems": [
             "valid-sudoku",
             "longest-repeating-character-replacement",
             "top-k-frequent-elements",
-            "product-of-array-except-self"
+            "product-of-array-except-self",
+            "merge-two-sorted-lists"
         ],
-        "submissions": 5
+        "submissions": 6
+    },
+    "556916889679560719": {
+        "links": [
+            "https://leetcode.com/problems/merge-two-sorted-lists/submissions/1385788708/",
+            "https://leetcode.com/problems/two-sum/submissions/1321062455/",
+            "https://leetcode.com/problems/add-two-numbers/submissions/1077708236/",
+            "https://leetcode.com/problems/longest-substring-without-repeating-characters/submissions/1348451170/",
+            "https://leetcode.com/problems/reverse-integer/submissions/1382514912/",
+            "https://leetcode.com/problems/string-to-integer-atoi/submissions/1381647269/",
+            "https://leetcode.com/problems/palindrome-number/submissions/1381613488/",
+            "https://leetcode.com/problems/remove-nth-node-from-end-of-list/submissions/1372855823/",
+            "https://leetcode.com/problems/valid-parentheses/submissions/1381542209/",
+            "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/submissions/1094671311/",
+            "https://leetcode.com/problems/same-tree/submissions/1340824850/",
+            "https://leetcode.com/problems/validate-binary-search-tree/submissions/1370477956/",
+            "https://leetcode.com/problems/binary-tree-inorder-traversal/submissions/1340869090/",
+            "https://leetcode.com/problems/climbing-stairs/submissions/1376694934/",
+            "https://leetcode.com/problems/plus-one/submissions/1360882337/"
+        ],
+        "problems": [
+            "merge-two-sorted-lists",
+            "two-sum",
+            "add-two-numbers",
+            "longest-substring-without-repeating-characters",
+            "reverse-integer",
+            "string-to-integer-atoi",
+            "palindrome-number",
+            "remove-nth-node-from-end-of-list",
+            "valid-parentheses",
+            "find-first-and-last-position-of-element-in-sorted-array",
+            "same-tree",
+            "validate-binary-search-tree",
+            "binary-tree-inorder-traversal",
+            "climbing-stairs",
+            "plus-one"
+        ],
+        "submissions": 15
     }
 }
