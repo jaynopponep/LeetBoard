@@ -7,8 +7,7 @@ from playwright.async_api import async_playwright
 
 bot = commands.Bot(command_prefix="lc ", intents=discord.Intents.all())
 
-with open("token.txt") as file:
-	token = file.read()
+token = os.getenv("token")
 
 def extract_problem(link):
 	try:
