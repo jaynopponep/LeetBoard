@@ -25,9 +25,18 @@ async def validate_page(link):
 		page = await browser.new_page()
 		await page.goto(link)
 		page_content = await page.content()
-		if "Accepted" not in page_content:
-			return False
-		await browser.close()
+		print(page_content)
+		#try:
+			#await page.wait_for_selector('text=Accepted', timeout=10000)
+			#await browser.close()
+			#return True
+		#except Exception:
+			#await browser.close()
+			#return False
+		#page_content = await page.content()
+		#if "Accepted" not in page_content:
+			#return False
+		#await browser.close()
 		return True
 
 @bot.command()
