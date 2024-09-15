@@ -115,6 +115,8 @@ async def problems(ctx):
         if os.path.exists('users.json'):
             with open('users.json', 'r', encoding='utf8') as f:
                 users = json.load(f)
+        if 'problems' not in users[str(ctx.author.id)]
+            await ctx.channel.send("You have not solved any problems yet!")
         problems = ""
         for i in range(len(users[str(ctx.author.id)]['problems'])):
             problems += users[str(ctx.author.id)]['problems'][i] + ", "
