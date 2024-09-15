@@ -2,7 +2,6 @@
     "1150800954606768150": {
         "links": [
             "https://leetcode.com/problems/valid-sudoku/submissions/1381595909",
-            "https://leetcode.com/problems/longest-repeating-character-replacement/submissions/1382665434",
             "https://leetcode.com/problems/top-k-frequent-elements/submissions/1379186010/",
             "https://leetcode.com/problems/product-of-array-except-self/submissions/1379142478/",
             "https://leetcode.com/problems/merge-two-sorted-lists/submissions/1385788708/",
@@ -11,20 +10,21 @@
             "https://leetcode.com/problems/group-anagrams/submissions/1379187704",
             "https://leetcode.com/problems/concatenation-of-array/submissions/1361490987",
             "https://leetcode.com/problems/reverse-linked-list/submissions/1387029097",
-            "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/submissions/1387066329"
+            "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/submissions/1387066329",
+            "https://leetcode.com/problems/longest-repeating-character-replacement/submissions/1382665434"
         ],
         "problems": [
-            "valid-sudoku",
-            "longest-repeating-character-replacement",
-            "top-k-frequent-elements",
-            "product-of-array-except-self",
-            "merge-two-sorted-lists",
-            "valid-anagram",
-            "contains-duplicate",
-            "group-anagrams",
-            "concatenation-of-array",
-            "reverse-linked-list",
-            "best-time-to-buy-and-sell-stock"
+            "valid sudoku",
+            "top k frequent elements",
+            "product of array except self",
+            "merge two sorted lists",
+            "valid anagram",
+            "contains duplicate",
+            "group anagrams",
+            "concatenation of array",
+            "reverse linked list",
+            "best time to buy and sell stock",
+            "longest repeating character replacement"
         ],
         "submissions": 12
     },
@@ -36,10 +36,10 @@
             "https://leetcode.com/problems/car-fleet/submissions/1390111392/"
         ],
         "problems": [
-            "generate-parentheses",
-            "evaluate-reverse-polish-notation",
-            "daily-temperatures",
-            "car-fleet"
+            "generate parentheses",
+            "evaluate reverse polish notation",
+            "daily temperatures",
+            "car fleet"
         ],
         "submissions": 4
     },
@@ -55,14 +55,14 @@
             "https://leetcode.com/problems/min-stack/submissions/1390470800/"
         ],
         "problems": [
-            "reverse-linked-list",
-            "longest-repeating-character-replacement",
-            "network-delay-time",
-            "number-of-islands",
-            "minimum-depth-of-binary-tree",
-            "binary-tree-pruning",
-            "01-matrix",
-            "min-stack"
+            "reverse linked list",
+            "longest repeating character replacement",
+            "network delay time",
+            "number of islands",
+            "minimum depth of binary tree",
+            "binary tree pruning",
+            "01 matrix",
+            "min stack"
         ],
         "submissions": 8
     },
@@ -73,9 +73,9 @@
             "https://leetcode.com/problems/two-sum/submissions/1390432642/"
         ],
         "problems": [
-            "contains-duplicate",
-            "valid-anagram",
-            "two-sum"
+            "contains duplicate",
+            "valid anagram",
+            "two sum"
         ],
         "submissions": 3
     },
@@ -104,27 +104,27 @@
             "https://leetcode.com/problems/merge-k-sorted-lists/submissions/1388895341/"
         ],
         "problems": [
-            "merge-two-sorted-lists",
-            "two-sum",
-            "add-two-numbers",
-            "longest-substring-without-repeating-characters",
-            "reverse-integer",
-            "string-to-integer-atoi",
-            "palindrome-number",
-            "remove-nth-node-from-end-of-list",
-            "valid-parentheses",
-            "find-first-and-last-position-of-element-in-sorted-array",
-            "same-tree",
-            "validate-binary-search-tree",
-            "binary-tree-inorder-traversal",
-            "climbing-stairs",
-            "plus-one",
-            "reorder-list",
-            "jewels-and-stones",
-            "count-the-number-of-consistent-strings",
-            "remove-duplicates-from-sorted-array",
-            "roman-to-integer",
-            "merge-k-sorted-lists"
+            "merge two sorted lists",
+            "two sum",
+            "add two numbers",
+            "longest substring without repeating characters",
+            "reverse integer",
+            "string to integer atoi",
+            "palindrome number",
+            "remove nth node from end of list",
+            "valid parentheses",
+            "find first and last position of element in sorted array",
+            "same tree",
+            "validate binary search tree",
+            "binary tree inorder traversal",
+            "climbing stairs",
+            "plus one",
+            "reorder list",
+            "jewels and stones",
+            "count the number of consistent strings",
+            "remove duplicates from sorted array",
+            "roman to integer",
+            "merge k sorted lists"
         ],
         "submissions": 21
     },
@@ -140,14 +140,14 @@
             "https://leetcode.com/problems/number-of-islands/submissions/1390383171/"
         ],
         "problems": [
-            "top-k-frequent-elements",
-            "remove-all-adjacent-duplicates-in-string-ii",
-            "remove-all-adjacent-duplicates-in-string",
-            "design-underground-system",
-            "decode-string",
-            "flatten-a-multilevel-doubly-linked-list",
-            "design-browser-history",
-            "number-of-islands"
+            "top k frequent elements",
+            "remove all adjacent duplicates in string ii",
+            "remove all adjacent duplicates in string",
+            "design underground system",
+            "decode string",
+            "flatten a multilevel doubly linked list",
+            "design browser history",
+            "number of islands"
         ],
         "submissions": 8
     }
