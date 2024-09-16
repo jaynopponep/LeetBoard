@@ -11,7 +11,8 @@
             "https://leetcode.com/problems/concatenation-of-array/submissions/1361490987",
             "https://leetcode.com/problems/reverse-linked-list/submissions/1387029097",
             "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/submissions/1387066329",
-            "https://leetcode.com/problems/longest-repeating-character-replacement/submissions/1382665434"
+            "https://leetcode.com/problems/longest-repeating-character-replacement/submissions/1382665434",
+            "https://leetcode.com/problems/longest-substring-without-repeating-characters/submissions/1391574074"
         ],
         "problems": [
             "valid sudoku",
@@ -24,24 +25,29 @@
             "concatenation of array",
             "reverse linked list",
             "best time to buy and sell stock",
-            "longest repeating character replacement"
+            "longest repeating character replacement",
+            "longest substring without repeating characters"
         ],
-        "submissions": 12
+        "submissions": 13
     },
     "152207704545296384": {
         "links": [
             "https://leetcode.com/problems/generate-parentheses/submissions/1388293291",
             "https://leetcode.com/problems/evaluate-reverse-polish-notation/submissions/1388829652/",
             "https://leetcode.com/problems/daily-temperatures/submissions/1389210896/",
-            "https://leetcode.com/problems/car-fleet/submissions/1390111392/"
+            "https://leetcode.com/problems/car-fleet/submissions/1390111392/",
+            "https://leetcode.com/problems/largest-rectangle-in-histogram/submissions/1391364882/",
+            "https://leetcode.com/problems/number-of-recent-calls/submissions/1392531390/"
         ],
         "problems": [
             "generate parentheses",
             "evaluate reverse polish notation",
             "daily temperatures",
-            "car fleet"
+            "car fleet",
+            "largest rectangle in histogram",
+            "number of recent calls"
         ],
-        "submissions": 4
+        "submissions": 6
     },
     "241734169057689602": {
         "links": [
@@ -70,14 +76,18 @@
         "links": [
             "https://leetcode.com/problems/contains-duplicate/submissions/1388821624/",
             "https://leetcode.com/problems/valid-anagram/submissions/1390429776/",
-            "https://leetcode.com/problems/two-sum/submissions/1390432642/"
+            "https://leetcode.com/problems/two-sum/submissions/1390432642/",
+            "https://leetcode.com/problems/group-anagrams/submissions/1391467234/",
+            "https://leetcode.com/problems/top-k-frequent-elements/submissions/1040757028/"
         ],
         "problems": [
             "contains duplicate",
             "valid anagram",
-            "two sum"
+            "two sum",
+            "group anagrams",
+            "top k frequent elements"
         ],
-        "submissions": 3
+        "submissions": 5
     },
     "556916889679560719": {
         "links": [
@@ -137,7 +147,8 @@
             "https://leetcode.com/problems/decode-string/submissions/1387037098/",
             "https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/submissions/1390348860/",
             "https://leetcode.com/problems/design-browser-history/submissions/1390447201/",
-            "https://leetcode.com/problems/number-of-islands/submissions/1390383171/"
+            "https://leetcode.com/problems/number-of-islands/submissions/1390383171/",
+            "https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/submissions/1392574050/"
         ],
         "problems": [
             "top k frequent elements",
@@ -147,8 +158,9 @@
             "decode string",
             "flatten a multilevel doubly linked list",
             "design browser history",
-            "number of islands"
+            "number of islands",
+            "vertical order traversal of a binary tree"
         ],
-        "submissions": 8
+        "submissions": 9
     }
 }
