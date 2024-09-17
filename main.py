@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import json
 import os
+import requests
 import asyncio
 from playwright.async_api import async_playwright
 
@@ -76,25 +77,25 @@ async def submit(interaction: discord.Interaction, link: str):
 		# read users & problem name^
 
 		if problem_name is None:
-			await interaction.send("Wrong link format, resubmit the link that contains the submission ID")
+			await interaction.response.send_message("Wrong link format, resubmit the link that contains the submission ID")
 			return
 		# handle submission, retrieve problem name
 
-		if str(interaction.author.id) in users:
-			users[str(interaction.author.id)]['submissions'] += interaction
-			if 'links' in users[str(interaction.author.id)] and 'problems' in users[str(interaction.author.id)]:
-				users[str(interaction.author.id)]['links'].append(link)
-				if problem_name in users[str(interaction.author.id)]['problems']:
-					await interaction.send("Cannot submit the same problem more than once! Nice try Diddy")
+		if str(interaction.user.id) in users:
+			users[str(interaction.user.id)]['submissions'] += 1
+			if 'links' in users[str(interaction.user.id)] and 'problems' in users[str(interaction.user.id)]:
+				users[str(interaction.user.id)]['links'].append(link)
+				if problem_name in users[str(interaction.user.id)]['problems']:
+					await interaction.response.send_message("Cannot submit the same problem more than once! Nice try Diddy")
 					return
 				else:
-					users[str(interaction.author.id)]['problems'].append(problem_name)
-			elif 'links' not in users[str(interaction.author.id)]:
-				users[str(interaction.author.id)]['links'] = [link]
+					users[str(interaction.user.id)]['problems'].append(problem_name)
+			elif 'links' not in users[str(interaction.user.id)]:
+				users[str(interaction.user.id)]['links'] = [link]
 			else:
-				users[str(interaction.author.id)]['problems'] = [problem_name]
+				users[str(interaction.user.id)]['problems'] = [problem_name]
 		else:
-			users[str(interaction.author.id)] = {
+			users[str(interaction.user.id)] = {
 				'submissions': 1,
 				'links': [link],
 				'problems': [problem_name]
@@ -103,10 +104,10 @@ async def submit(interaction: discord.Interaction, link: str):
 
 		with open('users.json', 'w', encoding='utf8') as f:
 			json.dump(users,f,sort_keys=True,indent=4,ensure_ascii=False)
-		subs = users[str(interaction.author.id)]['submissions']
-		await interaction.channel.send(f"{interaction.author.name} has solved {subs} leetcode problems!")
+		subs = users[str(interaction.user.id)]['submissions']
+		await interaction.response.send_message(f"{interaction.user.name} has solved {subs} leetcode problems!")
 	except Exception as e:
-		await interaction.send(f"An error occurred: {e}")
+		await interaction.response.send_message(f"An error occurred: {e}")
 
 @bot.tree.command(name="leaderboard")
 async def leaderboard(interaction: discord.Interaction):
@@ -125,11 +126,69 @@ async def leaderboard(interaction: discord.Interaction):
         
         embed.add_field(name="Highest Leetcode Submissions (all time)", value=leaderboard, inline=False)
         
-        await interaction.channel.send(embed=embed)
+        await interaction.response.send_message(embed=embed)
     
     except Exception as e:
-        await interaction.send(f"Error occurred: {e}")
- 
+        await interaction.response.send_message(f"Error occurred: {e}")
+
+
+@bot.tree.command(name="stats", description="Get your leetcode stats")
+async def stats(interaction: discord.Interaction):
+	try:
+		url = "https://leetcode.com/graphql"
+		query = """
+			query getUserProfile($username: String!) {
+				matchedUser(username: $username) {
+					username
+					submitStats: submitStatsGlobal {
+					acSubmissionNum {
+						difficulty
+						count
+						submissions
+					}
+					}
+				}
+				}
+  		"""
+		with open('users.json', 'r', encoding='utf8') as f:
+			users = json.load(f)
+		username = users[str(interaction.user.id)]['username']
+		variables = {
+			"username": username
+		}
+		response = requests.post(url=url, json={"query": query, "variables": variables})
+		if response.status_code == 200:
+			data = response.json()
+			# make a nice embed
+			embed = discord.Embed(title=f"{username}'s Leetcode Stats", description="", color=discord.Color.random())
+			for difficulty in data['data']['matchedUser']['submitStats']['acSubmissionNum']:
+				embed.add_field(name=f"{difficulty['difficulty']} problems", value=f"Submissions: {difficulty['submissions']}, Count: {difficulty['count']}", inline=False)
+			await interaction.response.send_message(embed=embed)
+		else:
+			interaction.response.send_message(f"An error occurred: {response.text}")
+	except Exception as e:
+		await interaction.response.send_message(f"An error occurred: {e}")
+     
+@bot.tree.command(name="register")
+async def register(interaction: discord.Interaction, username: str):
+	try:
+		if os.path.exists('users.json'):
+			with open('users.json', 'r', encoding='utf8') as f:
+				users = json.load(f)
+		else:
+			users = {}
+		users[str(interaction.user.id)] = {
+			'submissions': 0,
+			'links': [],
+			'problems': [],
+			'username': username
+		}
+		with open('users.json', 'w', encoding='utf8') as f:
+			json.dump(users,f,sort_keys=True,indent=4,ensure_ascii=False)
+		await interaction.response.send_message(f"{interaction.user.name} has been registered with username {username}")
+	except Exception as e:
+		await interaction.response.send_message(f"An error occurred: {e}")
+
 @bot.command()
 async def sync(ctx):
 	try:
