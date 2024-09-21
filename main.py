@@ -25,10 +25,6 @@ if len(os.sys.argv) > 1 and os.sys.argv[1] == "--test":
 	token = os.getenv("test_token")
 else:
     token = os.getenv("token")
-
-@bot.tree.command(name="ping")
-async def ping(interaction: discord.Interaction):
-	await interaction.response.send_message(content="Pong!")
     
 # TODO: extract helper functions to a separate file
 def extract_problem(link):

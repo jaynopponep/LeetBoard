@@ -1,0 +1,182 @@
+{
+    "1150800954606768150": {
+        "links": [
+            "https://leetcode.com/problems/valid-sudoku/submissions/1381595909",
+            "https://leetcode.com/problems/top-k-frequent-elements/submissions/1379186010/",
+            "https://leetcode.com/problems/product-of-array-except-self/submissions/1379142478/",
+            "https://leetcode.com/problems/merge-two-sorted-lists/submissions/1385788708/",
+            "https://leetcode.com/problems/valid-anagram/submissions/1379188996",
+            "https://leetcode.com/problems/contains-duplicate/submissions/1379188566",
+            "https://leetcode.com/problems/group-anagrams/submissions/1379187704",
+            "https://leetcode.com/problems/concatenation-of-array/submissions/1361490987",
+            "https://leetcode.com/problems/reverse-linked-list/submissions/1387029097",
+            "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/submissions/1387066329",
+            "https://leetcode.com/problems/longest-repeating-character-replacement/submissions/1382665434",
+            "https://leetcode.com/problems/longest-substring-without-repeating-characters/submissions/1391574074"
+        ],
+        "problems": [
+            "valid sudoku",
+            "top k frequent elements",
+            "product of array except self",
+            "merge two sorted lists",
+            "valid anagram",
+            "contains duplicate",
+            "group anagrams",
+            "concatenation of array",
+            "reverse linked list",
+            "best time to buy and sell stock",
+            "longest repeating character replacement",
+            "longest substring without repeating characters"
+        ],
+        "submissions": 13
+    },
+    "152207704545296384": {
+        "links": [
+            "https://leetcode.com/problems/generate-parentheses/submissions/1388293291",
+            "https://leetcode.com/problems/evaluate-reverse-polish-notation/submissions/1388829652/",
+            "https://leetcode.com/problems/daily-temperatures/submissions/1389210896/",
+            "https://leetcode.com/problems/car-fleet/submissions/1390111392/",
+            "https://leetcode.com/problems/largest-rectangle-in-histogram/submissions/1391364882/",
+            "https://leetcode.com/problems/number-of-recent-calls/submissions/1392531390/",
+            "https://leetcode.com/problems/binary-search/submissions/1392581169/",
+            "https://leetcode.com/problems/search-a-2d-matrix/submissions/1392592757/"
+        ],
+        "problems": [
+            "generate parentheses",
+            "evaluate reverse polish notation",
+            "daily temperatures",
+            "car fleet",
+            "largest rectangle in histogram",
+            "number of recent calls",
+            "binary search",
+            "search a 2d matrix"
+        ],
+        "submissions": 8
+    },
+    "241734169057689602": {
+        "links": [
+            "https://leetcode.com/problems/reverse-linked-list/submissions/1387188088/",
+            "https://leetcode.com/problems/longest-repeating-character-replacement/submissions/1382641071/",
+            "https://leetcode.com/problems/network-delay-time/submissions/1333404286/",
+            "https://leetcode.com/problems/number-of-islands/submissions/1330964157/",
+            "https://leetcode.com/problems/minimum-depth-of-binary-tree/submissions/1317961705/",
+            "https://leetcode.com/problems/binary-tree-pruning/submissions/1317968369/",
+            "https://leetcode.com/problems/01-matrix/submissions/1323338906/",
+            "https://leetcode.com/problems/min-stack/submissions/1390470800/",
+            "https://leetcode.com/problems/product-of-array-except-self/submissions/1395961620/"
+        ],
+        "problems": [
+            "reverse linked list",
+            "longest repeating character replacement",
+            "network delay time",
+            "number of islands",
+            "minimum depth of binary tree",
+            "binary tree pruning",
+            "01 matrix",
+            "min stack",
+            "product of array except self"
+        ],
+        "submissions": 9
+    },
+    "508652734510006273": {
+        "links": [
+            "https://leetcode.com/problems/contains-duplicate/submissions/1388821624/",
+            "https://leetcode.com/problems/valid-anagram/submissions/1390429776/",
+            "https://leetcode.com/problems/two-sum/submissions/1390432642/",
+            "https://leetcode.com/problems/group-anagrams/submissions/1391467234/",
+            "https://leetcode.com/problems/top-k-frequent-elements/submissions/1040757028/"
+        ],
+        "problems": [
+            "contains duplicate",
+            "valid anagram",
+            "two sum",
+            "group anagrams",
+            "top k frequent elements"
+        ],
+        "submissions": 5
+    },
+    "556916889679560719": {
+        "links": [
+            "https://leetcode.com/problems/merge-two-sorted-lists/submissions/1385788708/",
+            "https://leetcode.com/problems/two-sum/submissions/1321062455/",
+            "https://leetcode.com/problems/add-two-numbers/submissions/1077708236/",
+            "https://leetcode.com/problems/longest-substring-without-repeating-characters/submissions/1348451170/",
+            "https://leetcode.com/problems/reverse-integer/submissions/1382514912/",
+            "https://leetcode.com/problems/string-to-integer-atoi/submissions/1381647269/",
+            "https://leetcode.com/problems/palindrome-number/submissions/1381613488/",
+            "https://leetcode.com/problems/remove-nth-node-from-end-of-list/submissions/1372855823/",
+            "https://leetcode.com/problems/valid-parentheses/submissions/1381542209/",
+            "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/submissions/1094671311/",
+            "https://leetcode.com/problems/same-tree/submissions/1340824850/",
+            "https://leetcode.com/problems/validate-binary-search-tree/submissions/1370477956/",
+            "https://leetcode.com/problems/binary-tree-inorder-traversal/submissions/1340869090/",
+            "https://leetcode.com/problems/climbing-stairs/submissions/1376694934/",
+            "https://leetcode.com/problems/plus-one/submissions/1360882337/",
+            "https://leetcode.com/problems/reorder-list/submissions/1387010960/",
+            "https://leetcode.com/problems/jewels-and-stones/submissions/1387184809/",
+            "https://leetcode.com/problems/count-the-number-of-consistent-strings/submissions/1387264055/?envType=daily-question&envId=2024-09-12",
+            "https://leetcode.com/problems/remove-duplicates-from-sorted-array/submissions/1387283935/",
+            "https://leetcode.com/problems/roman-to-integer/submissions/1388360602/",
+            "https://leetcode.com/problems/merge-k-sorted-lists/submissions/1388895341/",
+            "https://leetcode.com/problems/subtree-of-another-tree/submissions/1395855936/",
+            "https://leetcode.com/problems/product-of-array-except-self/submissions/1395929484/",
+            "https://leetcode.com/problems/flood-fill/submissions/1396899145/",
+            "https://leetcode.com/problems/contains-duplicate/submissions/1396943015/"
+        ],
+        "problems": [
+            "merge two sorted lists",
+            "two sum",
+            "add two numbers",
+            "longest substring without repeating characters",
+            "reverse integer",
+            "string to integer atoi",
+            "palindrome number",
+            "remove nth node from end of list",
+            "valid parentheses",
+            "find first and last position of element in sorted array",
+            "same tree",
+            "validate binary search tree",
+            "binary tree inorder traversal",
+            "climbing stairs",
+            "plus one",
+            "reorder list",
+            "jewels and stones",
+            "count the number of consistent strings",
+            "remove duplicates from sorted array",
+            "roman to integer",
+            "merge k sorted lists",
+            "subtree of another tree",
+            "product of array except self",
+            "flood fill",
+            "contains duplicate"
+        ],
+        "submissions": 25
+    },
+    "653296016744906753": {
+        "links": [
+            "https://leetcode.com/problems/top-k-frequent-elements/submissions/1387001195/",
+            "https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/submissions/1385772924/",
+            "https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/submissions/1381499270/",
+            "https://leetcode.com/problems/design-underground-system/submissions/1378425973/",
+            "https://leetcode.com/problems/decode-string/submissions/1387037098/",
+            "https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/submissions/1390348860/",
+            "https://leetcode.com/problems/design-browser-history/submissions/1390447201/",
+            "https://leetcode.com/problems/number-of-islands/submissions/1390383171/",
+            "https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/submissions/1392574050/",
+            "https://leetcode.com/problems/word-search/submissions/1393603562/"
+        ],
+        "problems": [
+            "top k frequent elements",
+            "remove all adjacent duplicates in string ii",
+            "remove all adjacent duplicates in string",
+            "design underground system",
+            "decode string",
+            "flatten a multilevel doubly linked list",
+            "design browser history",
+            "number of islands",
+            "vertical order traversal of a binary tree",
+            "word search"
+        ],
+        "submissions": 10
+    }
+}
