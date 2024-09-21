@@ -37,7 +37,9 @@
             "https://leetcode.com/problems/daily-temperatures/submissions/1389210896/",
             "https://leetcode.com/problems/car-fleet/submissions/1390111392/",
             "https://leetcode.com/problems/largest-rectangle-in-histogram/submissions/1391364882/",
-            "https://leetcode.com/problems/number-of-recent-calls/submissions/1392531390/"
+            "https://leetcode.com/problems/number-of-recent-calls/submissions/1392531390/",
+            "https://leetcode.com/problems/binary-search/submissions/1392581169/",
+            "https://leetcode.com/problems/search-a-2d-matrix/submissions/1392592757/"
         ],
         "problems": [
             "generate parentheses",
@@ -45,9 +47,11 @@
             "daily temperatures",
             "car fleet",
             "largest rectangle in histogram",
-            "number of recent calls"
+            "number of recent calls",
+            "binary search",
+            "search a 2d matrix"
         ],
-        "submissions": 6
+        "submissions": 8
     },
     "241734169057689602": {
         "links": [
@@ -58,7 +62,8 @@
             "https://leetcode.com/problems/minimum-depth-of-binary-tree/submissions/1317961705/",
             "https://leetcode.com/problems/binary-tree-pruning/submissions/1317968369/",
             "https://leetcode.com/problems/01-matrix/submissions/1323338906/",
-            "https://leetcode.com/problems/min-stack/submissions/1390470800/"
+            "https://leetcode.com/problems/min-stack/submissions/1390470800/",
+            "https://leetcode.com/problems/product-of-array-except-self/submissions/1395961620/"
         ],
         "problems": [
             "reverse linked list",
@@ -68,9 +73,10 @@
             "minimum depth of binary tree",
             "binary tree pruning",
             "01 matrix",
-            "min stack"
+            "min stack",
+            "product of array except self"
         ],
-        "submissions": 8
+        "submissions": 9
     },
     "508652734510006273": {
         "links": [
@@ -111,7 +117,11 @@
             "https://leetcode.com/problems/count-the-number-of-consistent-strings/submissions/1387264055/?envType=daily-question&envId=2024-09-12",
             "https://leetcode.com/problems/remove-duplicates-from-sorted-array/submissions/1387283935/",
             "https://leetcode.com/problems/roman-to-integer/submissions/1388360602/",
-            "https://leetcode.com/problems/merge-k-sorted-lists/submissions/1388895341/"
+            "https://leetcode.com/problems/merge-k-sorted-lists/submissions/1388895341/",
+            "https://leetcode.com/problems/subtree-of-another-tree/submissions/1395855936/",
+            "https://leetcode.com/problems/product-of-array-except-self/submissions/1395929484/",
+            "https://leetcode.com/problems/flood-fill/submissions/1396899145/",
+            "https://leetcode.com/problems/contains-duplicate/submissions/1396943015/"
         ],
         "problems": [
             "merge two sorted lists",
@@ -134,9 +144,13 @@
             "count the number of consistent strings",
             "remove duplicates from sorted array",
             "roman to integer",
-            "merge k sorted lists"
+            "merge k sorted lists",
+            "subtree of another tree",
+            "product of array except self",
+            "flood fill",
+            "contains duplicate"
         ],
-        "submissions": 21
+        "submissions": 25
     },
     "653296016744906753": {
         "links": [
@@ -148,7 +162,8 @@
             "https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/submissions/1390348860/",
             "https://leetcode.com/problems/design-browser-history/submissions/1390447201/",
             "https://leetcode.com/problems/number-of-islands/submissions/1390383171/",
-            "https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/submissions/1392574050/"
+            "https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/submissions/1392574050/",
+            "https://leetcode.com/problems/word-search/submissions/1393603562/"
         ],
         "problems": [
             "top k frequent elements",
@@ -159,8 +174,9 @@
             "flatten a multilevel doubly linked list",
             "design browser history",
             "number of islands",
-            "vertical order traversal of a binary tree"
+            "vertical order traversal of a binary tree",
+            "word search"
         ],
-        "submissions": 9
+        "submissions": 10
     }
 }
