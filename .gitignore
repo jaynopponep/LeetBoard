@@ -2,3 +2,4 @@ token.txt
 /venv
 venv
 .env
+nohup.out

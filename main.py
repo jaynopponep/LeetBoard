@@ -30,7 +30,7 @@ else:
 def extract_problem(link):
 	try:
 		if "/submissions" in link and "/problems/" in link:
-			problem = link.split("/problems/")[1].split("/submissions")[0]
+			problem = (link.split("/problems/")[1].split("/submissions")[0]).replace("-", " ")
 		else:
 			return None
 		return problem
@@ -127,7 +127,6 @@ async def leaderboard(interaction: discord.Interaction):
     except Exception as e:
         await interaction.response.send_message(f"Error occurred: {e}")
 
-
 @bot.tree.command(name="stats", description="Get your leetcode stats")
 async def stats(interaction: discord.Interaction):
 	try:
@@ -193,4 +192,20 @@ async def sync(ctx):
 	except Exception as e:
 		await ctx.send(f"An error occurred: {e}")
  
+@bot.command()
+async def problems(ctx):
+    try:
+        if os.path.exists('users.json'):
+            with open('users.json', 'r', encoding='utf8') as f:
+                users = json.load(f)
+        if 'problems' not in users[str(ctx.author.id)]
+            await ctx.channel.send("You have not solved any problems yet!")
+        problems = ""
+        for i in range(len(users[str(ctx.author.id)]['problems'])):
+            problems += users[str(ctx.author.id)]['problems'][i] + ", "
+        problems = problems.rstrip(", ")
+        await ctx.channel.send(f"{ctx.author.name} has solved: {problems}")
+        print(problems)
+    except Exception as e:
+        print(e)
 bot.run(token)
