@@ -199,7 +199,7 @@ async def problems(ctx):
         if os.path.exists('users.json'):
             with open('users.json', 'r', encoding='utf8') as f:
                 users = json.load(f)
-        if 'problems' not in users[str(ctx.author.id)]
+        if 'problems' not in users[str(ctx.author.id)]:
             await ctx.channel.send("You have not solved any problems yet!")
         problems = ""
         for i in range(len(users[str(ctx.author.id)]['problems'])):
@@ -215,5 +215,5 @@ async def on_message(message):
     poll = r'y/n'
     if re.search(poll, message.content):
         await message.add_reaction(u"\u2B06\uFE0F")
-        await message.add_Reaction(u"\u2B07\uFE0F")
+        await message.add_reaction(u"\u2B07\uFE0F")
 bot.run(token)
