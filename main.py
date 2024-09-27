@@ -4,6 +4,7 @@ import json
 import os
 import requests
 import asyncio
+import re
 from playwright.async_api import async_playwright
 
 class Bot(commands.Bot):
@@ -208,4 +209,11 @@ async def problems(ctx):
         print(problems)
     except Exception as e:
         print(e)
+
+@bot.listen()
+async def on_message(message):
+    poll = r'y/n'
+    if re.search(poll, message.content):
+        await message.add_reaction(u"\u2B06\uFE0F")
+        await message.add_Reaction(u"\u2B07\uFE0F")
 bot.run(token)
