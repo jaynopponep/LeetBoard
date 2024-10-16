@@ -37,7 +37,8 @@ def extract_problem(link):
     except IndexError:
         return None
 
-#async def validate_page(link):
+async def validate_page(link):
+    return True
 #    async with async_playwright() as p:
 #        browser = await p.chromium.launch(headless=True)
 #        page = await browser.new_page()
