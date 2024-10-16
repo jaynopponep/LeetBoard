@@ -5,7 +5,6 @@ import os
 import requests
 import asyncio
 import re
-from playwright.async_api import async_playwright
 
 class Bot(commands.Bot):
     def __init__(self, intents: discord.Intents, **kwargs):
@@ -38,25 +37,25 @@ def extract_problem(link):
     except IndexError:
         return None
 
-async def validate_page(link):
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
-        page = await browser.new_page()
-        await page.goto(link)
-        page_content = await page.content()
-        print(page_content)
-        #try:
-            #await page.wait_for_selector('text=Accepted', timeout=10000)
-            #await browser.close()
-            #return True
-        #except Exception:
-            #await browser.close()
-            #return False
-        #page_content = await page.content()
-        #if "Accepted" not in page_content:
-            #return False
-        #await browser.close()
-        return True
+#async def validate_page(link):
+#    async with async_playwright() as p:
+#        browser = await p.chromium.launch(headless=True)
+#        page = await browser.new_page()
+#        await page.goto(link)
+#        page_content = await page.content()
+#        print(page_content)
+#        #try:
+#            #await page.wait_for_selector('text=Accepted', timeout=10000)
+#            #await browser.close()
+#            #return True
+#        #except Exception:
+#            #await browser.close()
+#            #return False
+#        #page_content = await page.content()
+#        #if "Accepted" not in page_content:
+#            #return False
+#        #await browser.close()
+#        return True
 
 @bot.tree.command(name="submit", description="Submit a leetcode problem link")
 async def submit(interaction: discord.Interaction, link: str):
@@ -102,7 +101,7 @@ async def submit(interaction: discord.Interaction, link: str):
         with open('users.json', 'w', encoding='utf8') as f:
             json.dump(users,f,sort_keys=True,indent=4,ensure_ascii=False)
         subs = users[str(interaction.user.id)]['submissions']
-        await interaction.response.send_message(f"{interaction.user.name} has solved {subs} leetcode problems!")
+        await interaction.response.send_message(f"Problem submitted: {link}. \n{interaction.user.name} has solved {subs} leetcode problems!")
     except Exception as e:
         await interaction.response.send_message(f"An error occurred: {e}")
 
