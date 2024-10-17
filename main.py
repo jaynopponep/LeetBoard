@@ -14,8 +14,8 @@ class Bot(commands.Bot):
     async def on_ready(self):
         print(f"Logged in as {self.user.name}")
         # this is higly not recommended, instead try to make a separate command and only allow the server owner/bot owner to run this
-        await self.tree.sync()
-        print(f"Commands synced: {self.commands}")
+        # await self.tree.sync()
+        # print(f"Commands synced: {self.commands}")
 
 
 intents = discord.Intents.all()
