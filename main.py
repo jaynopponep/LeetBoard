@@ -156,9 +156,22 @@ async def leaderboard(interaction: discord.Interaction):
 
         sorted_users = sorted(users.items(), key=lambda x: x[1]['submissions'], reverse=True)
 
+        # working implementation for top 3 (emoji addition) 
+        count = 1
+
         for user_id, score in sorted_users:
             user = await bot.fetch_user(int(user_id))
-            leaderboard += f"{user.name} - {score['submissions']}\n"
+            if count == 1:
+                leaderboard += f"🌟{user.name} - {score['submissions']}\n"
+                count += 1
+            elif count == 2:
+                leaderboard += f"⭐{user.name} - {score['submissions']}\n"
+                count += 1
+            elif count == 3:
+                leaderboard += f"✨{user.name} - {score['submissions']}\n"
+                count += 1
+            else:
+                leaderboard += f"{user.name} - {score['submissions']}\n"
 
         embed.add_field(name="Highest Leetcode Scores (All Time)", value=leaderboard, inline=False)
 
