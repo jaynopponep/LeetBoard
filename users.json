@@ -70,7 +70,7 @@
             "validate binary search tree",
             "two sum"
         ],
-        "submissions": 34,
+        "submissions": 53,
         "username": "gradlee"
     },
     "1176349930076512336": {
@@ -80,7 +80,7 @@
         "problems": [
             "reverse integer"
         ],
-        "submissions": 1
+        "submissions": 2
     },
     "152207704545296384": {
         "links": [
@@ -155,7 +155,7 @@
             "meeting scheduler",
             "design circular queue"
         ],
-        "submissions": 34,
+        "submissions": 61,
         "username": "AbdulAndha"
     },
     "178357540831100928": {
@@ -231,7 +231,7 @@
             "kth smallest element in a bst",
             "delete node in a linked list"
         ],
-        "submissions": 28,
+        "submissions": 44,
         "username": "abrarhabib285"
     },
     "401544052224557066": {
@@ -297,7 +297,7 @@
             "maximum depth of binary tree",
             "separate black and white balls"
         ],
-        "submissions": 23,
+        "submissions": 35,
         "username": "hothijinder"
     },
     "556916889679560719": {
@@ -403,7 +403,7 @@
             "longest happy string",
             "single number iii"
         ],
-        "submissions": 49
+        "submissions": 72
     },
     "653296016744906753": {
         "links": [
@@ -478,7 +478,7 @@
             "minimum path sum",
             "flatten deeply nested array"
         ],
-        "submissions": 34,
+        "submissions": 71,
         "username": "moncaptain"
     }
 }
