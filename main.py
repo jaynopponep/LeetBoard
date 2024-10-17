@@ -140,7 +140,7 @@ async def submit(interaction: discord.Interaction, link: str):
             json.dump(users, f, sort_keys=True, indent=4, ensure_ascii=False)
         subs = users[str(interaction.user.id)]['submissions']
         await interaction.response.send_message(
-            f"{difficulty} problem submitted: {link}. \n{interaction.user.name} has solved {subs} leetcode problems!")
+            f"{difficulty} problem submitted: {link}. \n{interaction.user.name}'s score is now {subs}!")
     except Exception as e:
         await interaction.response.send_message(f"An error occurred: {e}")
 
