@@ -288,7 +288,7 @@ async def on_message(message):
         await message.add_reaction(u"\u2B06\uFE0F")
         await message.add_reaction(u"\u2B07\uFE0F")
     if re.search(versus, message.content):
-        await message.add_reaction(u"\uE235")
+        await message.add_reaction(u"\u2B05")
         await message.add_reaction(u"\u27A1")
 
 bot.run(token)
