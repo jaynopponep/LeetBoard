@@ -29,7 +29,11 @@
             "https://leetcode.com/problems/invert-binary-tree/submissions/1424444623",
             "https://leetcode.com/problems/maximum-depth-of-binary-tree/submissions/1424447812",
             "https://leetcode.com/problems/same-tree/submissions/1424458011",
-            "https://leetcode.com/problems/subtree-of-another-tree/submissions/1424504706"
+            "https://leetcode.com/problems/subtree-of-another-tree/submissions/1424504706",
+            "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/submissions/1424611988",
+            "https://leetcode.com/problems/binary-tree-level-order-traversal/submissions/1424643481",
+            "https://leetcode.com/problems/validate-binary-search-tree/submissions/1424679223",
+            "https://leetcode.com/problems/two-sum/submissions/1402266916"
         ],
         "problems": [
             "valid sudoku",
@@ -60,9 +64,13 @@
             "invert binary tree",
             "maximum depth of binary tree",
             "same tree",
-            "subtree of another tree"
+            "subtree of another tree",
+            "lowest common ancestor of a binary search tree",
+            "binary tree level order traversal",
+            "validate binary search tree",
+            "two sum"
         ],
-        "submissions": 30,
+        "submissions": 34,
         "username": "gradlee"
     },
     "1176349930076512336": {
@@ -106,7 +114,10 @@
             "https://leetcode.com/problems/kth-smallest-element-in-a-bst/submissions/1422643211/",
             "https://leetcode.com/problems/coin-change/submissions/1424425712/",
             "https://leetcode.com/problems/valid-word-abbreviation/submissions/1424464357",
-            "https://leetcode.com/problems/most-common-word/submissions/1424484415"
+            "https://leetcode.com/problems/most-common-word/submissions/1424484415",
+            "https://leetcode.com/problems/maximum-depth-of-n-ary-tree/submissions/1424613700",
+            "https://leetcode.com/problems/meeting-scheduler/submissions/1424629306",
+            "https://leetcode.com/problems/design-circular-queue/submissions/1424764951"
         ],
         "problems": [
             "generate parentheses",
@@ -139,9 +150,12 @@
             "kth smallest element in a bst",
             "coin change",
             "valid word abbreviation",
-            "most common word"
+            "most common word",
+            "maximum depth of n ary tree",
+            "meeting scheduler",
+            "design circular queue"
         ],
-        "submissions": 31,
+        "submissions": 34,
         "username": "AbdulAndha"
     },
     "178357540831100928": {
@@ -334,7 +348,9 @@
             "https://leetcode.com/problems/powx-n/submissions/1421463368/",
             "https://leetcode.com/problems/unique-email-addresses/submissions/1421451716/",
             "https://leetcode.com/problems/house-robber/submissions/1423380242/",
-            "https://leetcode.com/problems/house-robber-ii/submissions/1423407475/"
+            "https://leetcode.com/problems/house-robber-ii/submissions/1423407475/",
+            "https://leetcode.com/problems/longest-happy-string/submissions/1424430337",
+            "https://leetcode.com/problems/single-number-iii/submissions/1424802812/?envType=daily-question&envId=2024-10-16"
         ],
         "problems": [
             "merge two sorted lists",
@@ -383,9 +399,11 @@
             "powx n",
             "unique email addresses",
             "house robber",
-            "house robber ii"
+            "house robber ii",
+            "longest happy string",
+            "single number iii"
         ],
-        "submissions": 47
+        "submissions": 49
     },
     "653296016744906753": {
         "links": [
