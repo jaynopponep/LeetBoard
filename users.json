@@ -199,7 +199,8 @@
             "https://leetcode.com/problems/remove-element/submissions/1419554335/",
             "https://leetcode.com/problems/maximal-score-after-applying-k-operations/submissions/1422634555/?envType=daily-question&envId=2024-10-14",
             "https://leetcode.com/problems/kth-smallest-element-in-a-bst/submissions/1422653774/",
-            "https://leetcode.com/problems/delete-node-in-a-linked-list/submissions/1284440087/"
+            "https://leetcode.com/problems/delete-node-in-a-linked-list/submissions/1284440087/",
+            "https://leetcode.com/problems/balanced-binary-tree/submissions/1424861736/"
         ],
         "problems": [
             "invert binary tree",
@@ -229,9 +230,10 @@
             "remove element",
             "maximal score after applying k operations",
             "kth smallest element in a bst",
-            "delete node in a linked list"
+            "delete node in a linked list",
+            "balanced binary tree"
         ],
-        "submissions": 44,
+        "submissions": 45,
         "username": "abrarhabib285"
     },
     "401544052224557066": {
