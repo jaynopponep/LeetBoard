@@ -160,7 +160,7 @@ async def leaderboard(interaction: discord.Interaction):
             user = await bot.fetch_user(int(user_id))
             leaderboard += f"{user.name} - {score['submissions']}\n"
 
-        embed.add_field(name="Highest Leetcode Submissions (all time)", value=leaderboard, inline=False)
+        embed.add_field(name="Highest Leetcode Scores (All Time)", value=leaderboard, inline=False)
 
         await interaction.response.send_message(embed=embed)
 
