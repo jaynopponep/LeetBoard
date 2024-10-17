@@ -13,9 +13,9 @@ class Bot(commands.Bot):
 
     async def on_ready(self):
         print(f"Logged in as {self.user.name}")
-        # # this is higly not recommended, instead try to make a separate command and only allow the server owner/bot owner to run this
-        # await self.tree.sync()
-        # print(f"Commands synced: {self.commands}")
+        # this is higly not recommended, instead try to make a separate command and only allow the server owner/bot owner to run this
+        await self.tree.sync()
+        print(f"Commands synced: {self.commands}")
 
 
 intents = discord.Intents.all()
@@ -232,6 +232,26 @@ async def register(interaction: discord.Interaction, username: str):
     except Exception as e:
         await interaction.response.send_message(f"An error occurred: {e}")
 
+@bot.tree.command(name="suggest")
+async def suggest(interaction: discord.Interaction, suggestion: str):
+    try:
+        if os.path.exists('suggestions.json'):
+            with open('suggestions.json', 'r', encoding='utf8') as f:
+                suggestions = json.load(f)
+        else:
+            suggestions = {}
+        username = str(interaction.user.name)
+        if username in suggestions:
+            suggestions[username]['suggestions'].append(suggestion)
+        else:
+            suggestions[username] = {
+                    'suggestions': [suggestion]
+            }
+        with open('suggestions.json', 'w', encoding='utf8') as f:
+            json.dump(suggestions, f, sort_keys=True, indent=4, ensure_ascii=False)
+        await interaction.response.send_message(f"Submission received. Thank you :)")
+    except Exception as e:
+        await interaction.response.send_message(f"An error occurred: {e}")
 
 @bot.command()
 async def sync(ctx):
@@ -263,9 +283,12 @@ async def problems(ctx):
 @bot.listen()
 async def on_message(message):
     poll = r'y/n'
+    versus = r'v/s'
     if re.search(poll, message.content):
         await message.add_reaction(u"\u2B06\uFE0F")
         await message.add_reaction(u"\u2B07\uFE0F")
-
+    if re.search(versus, message.content):
+        await message.add_reaction(u"\uE235")
+        await message.add_reaction(u"\u27A1")
 
 bot.run(token)
