@@ -275,19 +275,19 @@ async def sync(ctx):
         await ctx.send(f"An error occurred: {e}")
 
 
-@bot.command()
-async def problems(ctx):
+@bot.tree.command(name="problems", description="View problems you've done this season")
+async def problems(interaction: discord.Interaction):
     try:
         if os.path.exists('users.json'):
             with open('users.json', 'r', encoding='utf8') as f:
                 users = json.load(f)
-        if 'problems' not in users[str(ctx.author.id)]:
-            await ctx.channel.send("You have not solved any problems yet!")
+        if 'problems' not in users[str(interaction.user.id)]:
+            await interaction.response.send_message("You have not solved any problems yet!")
         problems = ""
-        for i in range(len(users[str(ctx.author.id)]['problems'])):
-            problems += users[str(ctx.author.id)]['problems'][i] + ", "
+        for i in range(len(users[str(interaction.user.id)]['problems'])):
+            problems += users[str(interaction.user.id)]['problems'][i] + ", "
         problems = problems.rstrip(", ")
-        await ctx.channel.send(f"{ctx.author.name} has solved: {problems}")
+        await interaction.response.send_message(f"{interaction.user.name} has solved: {problems}")
         print(problems)
     except Exception as e:
         print(e)
@@ -295,8 +295,8 @@ async def problems(ctx):
 
 @bot.listen()
 async def on_message(message):
-    poll = r'y/n'
-    versus = r'v/s'
+    poll = r' y/n '
+    versus = r' v/s '
     if re.search(poll, message.content):
         await message.add_reaction(u"\u2B06\uFE0F")
         await message.add_reaction(u"\u2B07\uFE0F")
