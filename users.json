@@ -258,7 +258,10 @@
             "https://leetcode.com/problems/time-needed-to-buy-tickets/submissions/1455725987",
             "https://leetcode.com/problems/majority-element/submissions/1456012096",
             "https://leetcode.com/problems/range-sum-query-immutable/submissions/1456023887",
-            "https://leetcode.com/problems/design-a-stack-with-increment-operation/submissions/1456552676"
+            "https://leetcode.com/problems/design-a-stack-with-increment-operation/submissions/1456552676",
+            "https://leetcode.com/problems/palindrome-number/submissions/1456622224",
+            "https://leetcode.com/problems/product-of-the-last-k-numbers/submissions/1456631184",
+            "https://leetcode.com/problems/design-circular-queue/submissions/1456812736"
         ],
         "problems": [
             "merge two sorted lists",
@@ -299,9 +302,12 @@
             "time needed to buy tickets",
             "majority element",
             "range sum query immutable",
-            "design a stack with increment operation"
+            "design a stack with increment operation",
+            "palindrome number",
+            "product of the last k numbers",
+            "design circular queue"
         ],
-        "submissions": 49,
+        "submissions": 54,
         "username": "joewadk"
     },
     "241734169057689602": {
@@ -397,7 +403,12 @@
             "https://leetcode.com/problems/climbing-stairs/submissions/1455749672/",
             "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/submissions/1455753410/",
             "https://leetcode.com/problems/two-sum/submissions/1455756806/",
-            "https://leetcode.com/problems/palindrome-number/submissions/1456611963/"
+            "https://leetcode.com/problems/palindrome-number/submissions/1456611963/",
+            "https://leetcode.com/problems/valid-anagram/submissions/1456718066/",
+            "https://leetcode.com/problems/first-unique-character-in-a-string/submissions/1456721869/",
+            "https://leetcode.com/problems/subsets/submissions/1456724166/",
+            "https://leetcode.com/problems/subsets-ii/submissions/1456729387/",
+            "https://leetcode.com/problems/valid-parentheses/submissions/1456737027/"
         ],
         "problems": [
             "search insert position",
@@ -409,9 +420,14 @@
             "climbing stairs",
             "best time to buy and sell stock",
             "two sum",
-            "palindrome number"
+            "palindrome number",
+            "valid anagram",
+            "first unique character in a string",
+            "subsets",
+            "subsets ii",
+            "valid parentheses"
         ],
-        "submissions": 10,
+        "submissions": 17,
         "username": "IshmamF"
     },
     "508652734510006273": {
@@ -642,7 +658,8 @@
             "https://leetcode.com/problems/kth-largest-element-in-an-array/submissions/1454085866/",
             "https://leetcode.com/problems/partition-list/submissions/1454773900/",
             "https://leetcode.com/problems/letter-combinations-of-a-phone-number/submissions/1455799007/?envType=study-plan-v2&envId=top-100-liked",
-            "https://leetcode.com/problems/time-needed-to-buy-tickets/submissions/1455815726/"
+            "https://leetcode.com/problems/time-needed-to-buy-tickets/submissions/1455815726/",
+            "https://leetcode.com/problems/design-a-stack-with-increment-operation/submissions/1456640131/"
         ],
         "problems": [
             "merge two sorted lists",
@@ -765,9 +782,10 @@
             "kth largest element in an array",
             "partition list",
             "letter combinations of a phone number",
-            "time needed to buy tickets"
+            "time needed to buy tickets",
+            "design a stack with increment operation"
         ],
-        "submissions": 183,
+        "submissions": 185,
         "username": "LordFarquaadtheCreator"
     },
     "653296016744906753": {
