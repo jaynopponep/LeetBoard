@@ -33,15 +33,18 @@ else:
 def extract_problem(link):
     try:
         if "/submissions" in link and "/problems/" in link:
-            problem = (link.split("/problems/")[1].split("/submissions")[0]).replace("-", " ")
+            problem = (link.split("/problems/")[1].split("/submissions")[0]).replace(
+                "-", " "
+            )
         else:
             return None
         return problem
     except IndexError:
         return None
 
+
 def get_difficulty(link):
-    title_slug = link.split('/problems/')[1].split('/')[0]
+    title_slug = link.split("/problems/")[1].split("/")[0]
     url = "https://leetcode.com/graphql"
     query = """
     query getProblemDetails($titleSlug: String!) {
@@ -51,13 +54,11 @@ def get_difficulty(link):
       }
     }
     """
-    variables = {
-            "titleSlug": title_slug
-    }
+    variables = {"titleSlug": title_slug}
     response = requests.post(url=url, json={"query": query, "variables": variables})
     if response.status_code == 200:
         data = response.json()
-        difficulty=data['data']['question']['difficulty']
+        difficulty = data["data"]["question"]["difficulty"]
         return difficulty
     else:
         return f"An error occurred: {response.text}"
@@ -86,6 +87,7 @@ async def validate_page(link):
 #        #await browser.close()
 #        return True
 
+
 @bot.tree.command(name="submit", description="Submit a leetcode problem link")
 async def submit(interaction: discord.Interaction, link: str):
     try:
@@ -93,8 +95,8 @@ async def submit(interaction: discord.Interaction, link: str):
         if not is_valid:
             await interaction.send("Not a valid submission link or problem")
             return
-        if os.path.exists('users.json'):
-            with open('users.json', 'r', encoding='utf8') as f:
+        if os.path.exists("users.json"):
+            with open("users.json", "r", encoding="utf8") as f:
                 users = json.load(f)
         else:
             users = {}
@@ -110,37 +112,44 @@ async def submit(interaction: discord.Interaction, link: str):
             score = 4
         if problem_name is None:
             await interaction.response.send_message(
-                "Wrong link format, resubmit the link that contains the submission ID")
+                "Wrong link format, resubmit the link that contains the submission ID"
+            )
             return
         # handle submission, retrieve problem name
 
         if str(interaction.user.id) in users:
-            users[str(interaction.user.id)]['submissions'] += score
-            if 'links' in users[str(interaction.user.id)] and 'problems' in users[str(interaction.user.id)]:
-                users[str(interaction.user.id)]['links'].append(link)
-                if problem_name in users[str(interaction.user.id)]['problems']:
+            users[str(interaction.user.id)]["submissions"] += score
+            if (
+                "links" in users[str(interaction.user.id)]
+                and "problems" in users[str(interaction.user.id)]
+            ):
+                users[str(interaction.user.id)]["links"].append(link)
+                if problem_name in users[str(interaction.user.id)]["problems"]:
                     await interaction.response.send_message(
-                        "Cannot submit the same problem more than once! Nice try Diddy")
+                        "Cannot submit the same problem more than once! Nice try Diddy"
+                    )
                     return
                 else:
-                    users[str(interaction.user.id)]['problems'].append(problem_name)
-            elif 'links' not in users[str(interaction.user.id)]:
-                users[str(interaction.user.id)]['links'] = [link]
+                    users[str(interaction.user.id)]["problems"].append(problem_name)
+            elif "links" not in users[str(interaction.user.id)]:
+                users[str(interaction.user.id)]["links"] = [link]
             else:
-                users[str(interaction.user.id)]['problems'] = [problem_name]
+                users[str(interaction.user.id)]["problems"] = [problem_name]
         else:
             users[str(interaction.user.id)] = {
-                'submissions': score,
-                'links': [link],
-                'problems': [problem_name]
+                "submissions": score,
+                "links": [link],
+                "problems": [problem_name],
             }
         # handle new data in json^
 
-        with open('users.json', 'w', encoding='utf8') as f:
+        problem_name = link.split("/")[5]
+        with open("users.json", "w", encoding="utf8") as f:
             json.dump(users, f, sort_keys=True, indent=4, ensure_ascii=False)
-        subs = users[str(interaction.user.id)]['submissions']
+        subs = users[str(interaction.user.id)]["submissions"]
         await interaction.response.send_message(
-            f"{difficulty} problem submitted: {link}. \n{interaction.user.name}'s score is now {subs}!")
+            f"{difficulty} problem submitted: [{problem_name}]({link}). \n{interaction.user.name}'s score is now {subs}!"
+        )
     except Exception as e:
         await interaction.response.send_message(f"An error occurred: {e}")
 
@@ -148,15 +157,19 @@ async def submit(interaction: discord.Interaction, link: str):
 @bot.tree.command(name="leaderboard")
 async def leaderboard(interaction: discord.Interaction):
     try:
-        embed = discord.Embed(title="Leaderboard", description="", color=discord.Color.random())
+        embed = discord.Embed(
+            title="Leaderboard", description="", color=discord.Color.random()
+        )
         leaderboard = ""
 
-        with open('users.json', 'r', encoding='utf8') as f:
+        with open("users.json", "r", encoding="utf8") as f:
             users = json.load(f)
 
-        sorted_users = sorted(users.items(), key=lambda x: x[1]['submissions'], reverse=True)
+        sorted_users = sorted(
+            users.items(), key=lambda x: x[1]["submissions"], reverse=True
+        )
 
-        # working implementation for top 3 (emoji addition) 
+        # working implementation for top 3 (emoji addition)
         count = 1
 
         for user_id, score in sorted_users:
@@ -173,7 +186,9 @@ async def leaderboard(interaction: discord.Interaction):
             else:
                 leaderboard += f"{user.name} - {score['submissions']}\n"
 
-        embed.add_field(name="Highest Leetcode Scores (All Time)", value=leaderboard, inline=False)
+        embed.add_field(
+            name="Highest Leetcode Scores (All Time)", value=leaderboard, inline=False
+        )
 
         await interaction.response.send_message(embed=embed)
 
@@ -199,21 +214,27 @@ async def stats(interaction: discord.Interaction):
                 }
                 }
         """
-        with open('users.json', 'r', encoding='utf8') as f:
+        with open("users.json", "r", encoding="utf8") as f:
             users = json.load(f)
-        username = users[str(interaction.user.id)]['username']
-        variables = {
-            "username": username
-        }
+        username = users[str(interaction.user.id)]["username"]
+        variables = {"username": username}
         response = requests.post(url=url, json={"query": query, "variables": variables})
         if response.status_code == 200:
             data = response.json()
             # make a nice embed
-            embed = discord.Embed(title=f"{username}'s Leetcode Stats", description="", color=discord.Color.random())
-            for difficulty in data['data']['matchedUser']['submitStats']['acSubmissionNum']:
-                embed.add_field(name=f"{difficulty['difficulty']} problems",
-                                value=f"Submissions: {difficulty['submissions']}, Count: {difficulty['count']}",
-                                inline=False)
+            embed = discord.Embed(
+                title=f"{username}'s Leetcode Stats",
+                description="",
+                color=discord.Color.random(),
+            )
+            for difficulty in data["data"]["matchedUser"]["submitStats"][
+                "acSubmissionNum"
+            ]:
+                embed.add_field(
+                    name=f"{difficulty['difficulty']} problems",
+                    value=f"Submissions: {difficulty['submissions']}, Count: {difficulty['count']}",
+                    inline=False,
+                )
             await interaction.response.send_message(embed=embed)
         else:
             interaction.response.send_message(f"An error occurred: {response.text}")
@@ -224,47 +245,49 @@ async def stats(interaction: discord.Interaction):
 @bot.tree.command(name="register")
 async def register(interaction: discord.Interaction, username: str):
     try:
-        if os.path.exists('users.json'):
-            with open('users.json', 'r', encoding='utf8') as f:
+        if os.path.exists("users.json"):
+            with open("users.json", "r", encoding="utf8") as f:
                 users = json.load(f)
         else:
             users = {}
         user_id = str(interaction.user.id)
         if user_id in users:
-            users[user_id]['username'] = username
+            users[user_id]["username"] = username
         else:
             users[user_id] = {
-                'submissions': 0,
-                'links': [],
-                'problems': [],
-                'username': username
+                "submissions": 0,
+                "links": [],
+                "problems": [],
+                "username": username,
             }
-        with open('users.json', 'w', encoding='utf8') as f:
+        with open("users.json", "w", encoding="utf8") as f:
             json.dump(users, f, sort_keys=True, indent=4, ensure_ascii=False)
-        await interaction.response.send_message(f"{interaction.user.name} has been registered with username {username}")
+        await interaction.response.send_message(
+            f"{interaction.user.name} has been registered with username {username}"
+        )
     except Exception as e:
         await interaction.response.send_message(f"An error occurred: {e}")
+
 
 @bot.tree.command(name="suggest")
 async def suggest(interaction: discord.Interaction, suggestion: str):
     try:
-        if os.path.exists('suggestions.json'):
-            with open('suggestions.json', 'r', encoding='utf8') as f:
+        if os.path.exists("suggestions.json"):
+            with open("suggestions.json", "r", encoding="utf8") as f:
                 suggestions = json.load(f)
         else:
             suggestions = {}
         username = str(interaction.user.name)
         if username in suggestions:
-            suggestions[username]['suggestions'].append(suggestion)
+            suggestions[username]["suggestions"].append(suggestion)
         else:
-            suggestions[username] = {
-                    'suggestions': [suggestion]
-            }
-        with open('suggestions.json', 'w', encoding='utf8') as f:
+            suggestions[username] = {"suggestions": [suggestion]}
+        with open("suggestions.json", "w", encoding="utf8") as f:
             json.dump(suggestions, f, sort_keys=True, indent=4, ensure_ascii=False)
         await interaction.response.send_message(f"Submission received. Thank you :)")
     except Exception as e:
         await interaction.response.send_message(f"An error occurred: {e}")
+
 
 @bot.command()
 async def sync(ctx):
@@ -278,14 +301,14 @@ async def sync(ctx):
 @bot.command()
 async def problems(ctx):
     try:
-        if os.path.exists('users.json'):
-            with open('users.json', 'r', encoding='utf8') as f:
+        if os.path.exists("users.json"):
+            with open("users.json", "r", encoding="utf8") as f:
                 users = json.load(f)
-        if 'problems' not in users[str(ctx.author.id)]:
+        if "problems" not in users[str(ctx.author.id)]:
             await ctx.channel.send("You have not solved any problems yet!")
         problems = ""
-        for i in range(len(users[str(ctx.author.id)]['problems'])):
-            problems += users[str(ctx.author.id)]['problems'][i] + ", "
+        for i in range(len(users[str(ctx.author.id)]["problems"])):
+            problems += users[str(ctx.author.id)]["problems"][i] + ", "
         problems = problems.rstrip(", ")
         await ctx.channel.send(f"{ctx.author.name} has solved: {problems}")
         print(problems)
@@ -295,13 +318,14 @@ async def problems(ctx):
 
 @bot.listen()
 async def on_message(message):
-    poll = r'y/n'
-    versus = r'v/s'
+    poll = r"y/n"
+    versus = r"v/s"
     if re.search(poll, message.content):
-        await message.add_reaction(u"\u2B06\uFE0F")
-        await message.add_reaction(u"\u2B07\uFE0F")
+        await message.add_reaction("\u2B06\uFE0F")
+        await message.add_reaction("\u2B07\uFE0F")
     if re.search(versus, message.content):
-        await message.add_reaction(u"\u2B05")
-        await message.add_reaction(u"\u27A1")
+        await message.add_reaction("\u2B05")
+        await message.add_reaction("\u27A1")
+
 
 bot.run(token)
