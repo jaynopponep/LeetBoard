@@ -1,4 +1,5 @@
 # LeetBoard Discord Bot - Compete with friends on completing LeetCode problems!
+LeetBoard and its features has been completed migrated to [Silvercord](https://github.com/BYTE-Club-CCNY/Silvercord) </br>
 LeetBoard is a Discord bot built with Discord.py to allow for users to submit validated LeetCode problems and compete for the highest ranking on the leaderboard in their Discord server!</br>
 # Demo
 [Coming Soon!]
